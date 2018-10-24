@@ -1,0 +1,26 @@
+<mdb-navbar SideClass="navbar lighten">
+  <logo>
+    <a class="navbar-brand" href="#">
+      <h4>
+        <img src="https://cdn.worldvectorlogo.com/logos/google-photos.svg" height="40" alt=""> PIC-BUCKET</h4>
+    </a>
+  </logo>
+</mdb-navbar>
+
+<div class="container mt-5 mb-5">
+
+  <div class="card back md-col-12" align="center">
+    <h1 style="color: aliceblue">Google Picture Gallery</h1>
+  </div>
+  <div class="row mt-5" align="center" style="margin: 23px;">
+
+    <div class="card" *ngFor="let album of albums" style="margin:10px;">
+      <div class="view hm-white-slight waves-light" mdbWavesEffect>
+        <img src="{{album.coverPhotoBaseUrl}}" class="img-fluid" alt="Album Cover">
+        <a>
+          <div class="mask"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
